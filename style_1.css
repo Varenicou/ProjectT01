@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Tambahkan ini untuk memindahkan tautan ke kanan */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px; /* Adjust based on header height */
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
